@@ -1,7 +1,8 @@
 .button {
     -fx-background-color: #f869f8;
     -fx-text-fill: black;
-    -fx-font-size: 24px;
+    -fx-font-family: "Bodoni MT Condensed";
+    -fx-font-size: 32px;
 }
 .button:hover{
     -fx-opacity: 0.8;

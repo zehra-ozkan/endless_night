@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dilazehra.endless_night.sceneController.DoubleOptionController">
+   <children>
+      <Pane layoutX="8.0" layoutY="4.0" prefHeight="262.0" prefWidth="582.0" AnchorPane.topAnchor="4.0">
+         <children>
+            <ImageView fx:id="img_view" fitHeight="242.0" fitWidth="573.0" layoutX="8.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <VBox layoutX="1.0" layoutY="281.0" prefHeight="118.0" prefWidth="600.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="what is the correct answer?" wrappingWidth="592.5367012023926" />
+            <HBox alignment="BOTTOM_CENTER" prefHeight="102.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="left_btn" mnemonicParsing="false" onAction="#btn_clicked" prefHeight="60.0" prefWidth="114.0" stylesheets="@../styles/general.css" text="5">
+                     <HBox.margin>
+                        <Insets bottom="5.0" right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="right_btn" mnemonicParsing="false" onAction="#btn_clicked" prefHeight="60.0" prefWidth="114.0" stylesheets="@../styles/general.css" text="12">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
