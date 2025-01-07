@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dilazehra.endless_night.sceneController.DoubleOptionController">
    <children>
       <Pane layoutX="8.0" layoutY="4.0" prefHeight="262.0" prefWidth="582.0" AnchorPane.topAnchor="4.0">

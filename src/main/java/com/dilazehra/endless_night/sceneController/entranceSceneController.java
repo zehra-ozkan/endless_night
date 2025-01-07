@@ -25,17 +25,20 @@ public class entranceSceneController {
     void btn_clicked(ActionEvent event) throws IOException {
         if(event.getSource() == start_btn) {
             System.out.println("now we start");
-            FXMLLoader loader = FxmlLoader.load("doubleOptionScene");
+            FXMLLoader loader = FxmlLoader.load("converseScene");
             root = loader.load();
             //image can now be set
-            DoubleOptionController dController = loader.getController();
-            dController.setImage(ImageLoader.load("image1.png"));
-            dController.setLeft_btn("8");
-            dController.setRight_btn("4");
+            ConverseController cController = loader.getController();
+            cController.setAvatar(ImageLoader.load("cute_avatar.png"));
 
-            Stage stage =(Stage) start_btn.getScene().getWindow();
 
-            Scene scene = new Scene(loader.load());
+            cController.setMainImage(ImageLoader.load("image0.png"));
+            cController.setText("there was something and now there is not I am this alson known as that now we are toherehe ");
+            cController.setButtons(1);
+
+            Stage stage = (Stage) start_btn.getScene().getWindow();
+
+            Scene scene = new Scene(root);
             stage.setTitle("Hello!");
             stage.setScene(scene);
             stage.show();

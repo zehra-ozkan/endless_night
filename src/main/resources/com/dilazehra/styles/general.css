@@ -4,12 +4,42 @@
     -fx-font-family: "Bodoni MT Condensed";
     -fx-font-size: 32px;
 }
-.button:hover{
+.button:hover {
     -fx-opacity: 0.8;
-
 }
 
 .label {
-    -fx-text-fill: #2c3e50;
+    -fx-text-fill: #ffbbff;
+    -fx-background-color: rgb(0, 35, 80); /* Background color */
+    -fx-font-family: "Bodoni MT Condensed";
+    -fx-padding: 10px; /* Padding inside the label */
+    -fx-font-size: 24px; /* Font size */
+    -fx-font-weight: 600;
+
+    /*-fx-border-color: black; !* Border color *!*/
+    -fx-border-width: 2px; /* Border width */
+    -fx-border-radius: 6px; /* Border radius */
+    -fx-background-radius: 15px; /* Background radius to match the border */
+}
+.pane {
+    -fx-padding: 5px;
+    -fx-background-color: white; /* Used a valid JavaFX property */
+    -fx-opacity: 0.9;
+}
+.avatar{
+    -fx-end-margin: 10px;
+}
+.converse_btn{
+    -fx-background-color: rgb(0, 35, 80); /* Background color */
+    -fx-text-fill: white;
     -fx-font-size: 16px;
+
+}
+.converse_btn:hover{
+    -fx-background-color: rgb(3, 47, 104); /* Background color */
+    -fx-font-size: 18px;
+}
+
+.hbox{
+    -fx-background-color: rgb(0, 35, 80); /* Background color */
 }
