@@ -1,6 +1,7 @@
 package com.dilazehra.endless_night.sceneController;
 
 import com.dilazehra.endless_night.FxmlLoader;
+import com.dilazehra.endless_night.GameLogic;
 import com.dilazehra.endless_night.ImageLoader;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,20 +10,28 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
+
+import static com.dilazehra.endless_night.GameLogic.endKey;
+import static com.dilazehra.endless_night.GameLogic.getText;
 
 public class ConverseController {
 
     private Parent root;
+    private String imageName;
+    int current = 0;
 
 
     @FXML
-    private Text bottom_text;
+    private TextArea bottom_text;
 
     @FXML
     private ImageView avatar;
@@ -36,8 +45,6 @@ public class ConverseController {
     @FXML
     private ImageView main_image;
 
-    @FXML
-    private Label text_part;
 
 
     //duplicate what to do?
@@ -45,6 +52,20 @@ public class ConverseController {
     @FXML
     void btn_clicked(ActionEvent event) throws IOException {
         if(event.getSource() == next_btn) {
+            boolean pass = false;
+            if(!Objects.equals(getText(imageName, current), endKey)){
+                setText(getText(imageName, current));
+                setButtons(5);
+                current++;
+                return;
+            }
+            else{
+                setButtons(2);//this means the last line of the image
+                pass = true;
+            }
+            if(!pass) return;
+
+            //TODO can be put in a method
             FXMLLoader loader = FxmlLoader.load("doubleOptionScene");
             root = loader.load();
             //image can now be set
@@ -59,6 +80,15 @@ public class ConverseController {
             stage.setTitle("Hello!");
             stage.setScene(scene);
             stage.show();
+        } else if (event.getSource() == back_btn) {
+            if(!Objects.equals(getText(imageName, current), endKey)){
+                setText(getText(imageName, current));
+                setButtons(5);
+                current--;
+            }
+            else{
+                setButtons(1);//this means the first line of the image
+            }
         }
     }
 
@@ -70,6 +100,7 @@ public class ConverseController {
         avatar.setImage(new Image(getClass().getResourceAsStream(imagePath)));
     }
     void setMainImage(String imagePath){
+        imageName = imagePath;
         main_image.setImage(new Image(getClass().getResourceAsStream(imagePath)));
 //        main_image.setImage(new Image(imagePath));
     }
@@ -81,6 +112,10 @@ public class ConverseController {
         }
         else if(stat == 2){
             next_btn.setDisable(true);
+        }
+        else{
+            next_btn.setDisable(false);
+            back_btn.setDisable(false);
         }
     }
 
