@@ -18,7 +18,6 @@ public class App extends Application {
         //FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/dilazehra/Scenes/enranceScene.fxml"));
         FXMLLoader fxmlLoader = FxmlLoader.load("enranceScene");
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
     }

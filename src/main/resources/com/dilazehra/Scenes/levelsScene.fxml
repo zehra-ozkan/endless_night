@@ -2,43 +2,70 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@../styles/general.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="104.0" layoutY="150.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="112.0" style="-fx-background-color: #fbbdfc;" text="Level 1" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="Arial Black" size="24.0" />
-         </font>
-      </Button>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="195.0" layoutY="50.0" prefHeight="56.0" prefWidth="210.0" styleClass="text-area" stylesheets="@../styles/general.css" text="LEVELS" textAlignment="CENTER" textFill="#a200eb">
-         <font>
-            <Font name="Comic Sans MS Bold" size="48.0" />
-         </font>
-      </Label>
-      <Button layoutX="384.0" layoutY="150.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="112.0" styleClass="level_buttons" stylesheets="@../styles/general.css" text="ghgjgj" textAlignment="CENTER" />
-      <Button layoutX="247.0" layoutY="150.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="112.0" style="-fx-background-color: #fbbdfc;" text="Level 2" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="Comic Sans MS" size="24.0" />
-         </font>
-      </Button>
-      <Button layoutX="104.0" layoutY="255.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="112.0" style="-fx-background-color: #fbbdfc;" text="Level 4" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="Comic Sans MS" size="24.0" />
-         </font>
-      </Button>
-      <Button layoutX="384.0" layoutY="255.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="112.0" style="-fx-background-color: #fbbdfc;" text="Level 6" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="Comic Sans MS" size="24.0" />
-         </font>
-      </Button>
-      <Button layoutX="247.0" layoutY="255.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="112.0" style="-fx-background-color: #fbbdfc;" text="Level 5" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="Comic Sans MS" size="24.0" />
-         </font>
-      </Button>
-      <Button layoutX="26.0" layoutY="351.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="62.0" text="back" />
+      <ImageView fitHeight="569.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../Users/tayyi/Downloads/ai-generated-mysterious-dark-forest-with-stars-in-the-sky-night-forest-with-full-moon-and-stars-in-the-sky-photo.jpg" />
+         </image>
+      </ImageView>
+      <VBox layoutX="7.0" layoutY="6.0" prefHeight="392.0" prefWidth="591.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" styleClass="hbox1" stylesheets="@../styles/general.css">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="56.0" prefWidth="210.0" stylesheets="@../styles/general.css" text="LEVELS" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="48.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="149.0" prefWidth="591.0" styleClass="hbox1" stylesheets="@../styles/general.css">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="58.0" styleClass="level_buttons" stylesheets="@../styles/general.css" text="1" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="55.0" styleClass="level_buttons" stylesheets="@../styles/general.css" text="2" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="58.0" styleClass="level_buttons" stylesheets="@../styles/general.css" text="3" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS" size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="132.0" prefWidth="591.0" styleClass="hbox1" stylesheets="@../styles/general.css">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="58.0" styleClass="level_buttons" stylesheets="@../styles/general.css" text="4" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="58.0" styleClass="level_buttons" stylesheets="@../styles/general.css" text="5" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="58.0" styleClass="level_buttons" stylesheets="@../styles/general.css" text="6" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS" size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
