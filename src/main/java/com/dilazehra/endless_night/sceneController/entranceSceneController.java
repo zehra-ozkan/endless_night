@@ -33,7 +33,7 @@ public class entranceSceneController {
 
 
             cController.setMainImage(ImageLoader.load("image0.png"));
-            cController.setText("there was something and now there is not I am this alson known as that now we are toherehe ");
+            cController.setText("there was something and now there is not I am this also known as that now we are toherehe ");
             cController.setButtons(1);
 
             Stage stage = (Stage) start_btn.getScene().getWindow();

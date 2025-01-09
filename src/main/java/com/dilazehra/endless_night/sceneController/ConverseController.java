@@ -55,7 +55,7 @@ public class ConverseController {
             boolean pass = false;
             if(!Objects.equals(getText(imageName, current), endKey)){
                 setText(getText(imageName, current));
-                setButtons(5);
+                setButtons(5);//TODO NEEDS TO BE FİXED
                 current++;
                 return;
             }
@@ -84,7 +84,7 @@ public class ConverseController {
             if(!Objects.equals(getText(imageName, current), endKey)){
                 setText(getText(imageName, current));
                 setButtons(5);
-                current--;
+                current--;//789465
             }
             else{
                 setButtons(1);//this means the first line of the image
