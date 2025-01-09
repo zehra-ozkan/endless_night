@@ -79,7 +79,7 @@ public class ConverseController {
             Scene scene = new Scene(root);
             stage.setTitle("Hello!");
             stage.setScene(scene);
-            stage.show();
+            stage.show();///sdf
         } else if (event.getSource() == back_btn) {
             if(!Objects.equals(getText(imageName, current), endKey)){
                 setText(getText(imageName, current));
