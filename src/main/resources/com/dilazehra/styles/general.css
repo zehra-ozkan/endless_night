@@ -50,3 +50,13 @@
 .hbox{
     -fx-background-color: rgb(0, 35, 80); /* Background color */
 }
+.level_buttons{
+    -fx-opacity: 1;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: rgb(0, 35, 80); /* Background color */
+    -fx-font-family: "Bodoni MT Condensed";
+    -fx-padding: 10px; /* Padding inside the label */
+    -fx-font-size: 24px; /* Font size */
+    -fx-font-weight: 600;
+
+}
