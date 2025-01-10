@@ -18,6 +18,8 @@ public class App extends Application {
         //FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/dilazehra/Scenes/enranceScene.fxml"));
         FXMLLoader fxmlLoader = FxmlLoader.load("enranceScene");
         Scene scene = new Scene(fxmlLoader.load());
+        stage.setWidth(800);   // Optional: Set the stage size
+        stage.setHeight(600);  // Optional: Set the stage size
         stage.setScene(scene);
         stage.show();
     }

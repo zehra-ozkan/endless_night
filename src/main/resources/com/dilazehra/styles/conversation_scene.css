@@ -1,0 +1,33 @@
+
+.text_area {
+    -fx-opacity: 1;
+    -fx-text-fill: #ffbbff;
+    -fx-background-color: rgb(240, 255, 184); /* Background color */
+    -fx-font-family: "Bodoni MT Condensed";
+    -fx-padding: 1px; /* Padding inside the label */
+    -fx-font-size: 22px; /* Font size */
+    -fx-wrap-text: true; /* Enable text wrapping */
+    -fx-font-weight: 700;
+
+}
+.text-area .content {
+    -fx-background-color: rgb(0, 0, 0); /* Same as the TextArea background */
+}
+/* Remove scroll bars in TextArea */
+.text_area .scroll-pane {
+    -fx-hbar-policy: never; /* Hide horizontal scroll bar */
+    -fx-vbar-policy: never; /* Hide vertical scroll bar */
+}
+.converse_btn{
+    -fx-background-color: transparent; /* Background color */
+    -fx-padding: 1px;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+
+}
+.converse_btn:hover{
+
+    -fx-font-size: 18px;
+}
+
+

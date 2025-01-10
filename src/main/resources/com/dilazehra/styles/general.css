@@ -1,31 +1,22 @@
+.root_container {
+    -fx-background-color: lightblue;
+    -fx-pref-width: 100%; /* Avoid fixed sizes */
+    -fx-pref-height: 100%;
+    -fx-min-width: 600px; /* Set minimum size */
+    -fx-min-height: 400px; /* Set minimum size */
+}
 .button {
     -fx-background-color: #f869f8;
+    -fx-pref-width: 150px;
+    -fx-pref-height: 50px;
+    -fx-halignment: center;
+    -fx-valignment: center;
     -fx-text-fill: black;
     -fx-font-family: "Bodoni MT Condensed";
     -fx-font-size: 32px;
 }
 .button:hover {
     -fx-opacity: 0.8;
-}
-
-.text_area {
-    -fx-opacity: 1;
-    -fx-text-fill: #ffbbff;
-    -fx-background-color: rgb(0, 35, 80); /* Background color */
-    -fx-font-family: "Bodoni MT Condensed";
-    -fx-padding: 10px; /* Padding inside the label */
-    -fx-font-size: 24px; /* Font size */
-    -fx-wrap-text: true; /* Enable text wrapping */
-    -fx-font-weight: 600;
-
-}
-.text-area .content {
-    -fx-background-color: rgb(0, 35, 80); /* Same as the TextArea background */
-}
-/* Remove scroll bars in TextArea */
-.text_area .scroll-pane {
-    -fx-hbar-policy: never; /* Hide horizontal scroll bar */
-    -fx-vbar-policy: never; /* Hide vertical scroll bar */
 }
 
 .pane {
@@ -36,19 +27,10 @@
 .avatar{
     -fx-end-margin: 10px;
 }
-.converse_btn{
-    -fx-background-color: rgb(0, 35, 80); /* Background color */
-    -fx-text-fill: white;
-    -fx-font-size: 16px;
-
-}
-.converse_btn:hover{
-    -fx-background-color: rgb(3, 47, 104); /* Background color */
-    -fx-font-size: 18px;
-}
 
 .hbox{
-    -fx-background-color: rgb(0, 35, 80); /* Background color */
+    -fx-background-color: transparent; /* Transparent background */
+
 }
 .level_buttons{
     -fx-opacity: 1;

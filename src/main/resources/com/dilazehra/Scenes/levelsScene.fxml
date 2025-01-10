@@ -13,7 +13,7 @@
    <children>
       <ImageView fitHeight="569.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Images/background.jpg" />
+            <Image url="@../Images/backgrounds/background.jpg" />
          </image>
       </ImageView>
       <VBox layoutX="7.0" layoutY="6.0" prefHeight="392.0" prefWidth="591.0">
