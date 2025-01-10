@@ -54,5 +54,66 @@
       "image": "/com/dilazehra/Images/backgrounds/background2.png",
       "avatar":"/com/dilazehra/Images/avatars/mike.png"
     }
+  ],
+  "scene2": [
+    {
+      "text": "Maybe Santoix was trying to warn us when we first saw the mansion of Gipsy’s Acre.",
+      "image": "/com/dilazehra/Images/backgrounds/background3.png",
+      "avatar":"/com/dilazehra/Images/avatars/mike.png"
+    },
+    {
+      "text": "NONE",
+      "image": "/com/dilazehra/Images/backgrounds/background3.png",
+      "avatar":"NONE"
+
+    },
+    {
+      "text": "Like it?",
+      "image": "/com/dilazehra/Images/backgrounds/background4.png",
+      "avatar":"NONE"
+
+    },
+    {
+      "text": "New character added. Santoix unlocked.",
+      "image": "/com/dilazehra/Images/backgrounds/background4.png",
+      "avatar":"NONE"
+
+    }
+  ,{
+      "text": "“It’s the tops,”.A silly thing to say but he knew what I meant.",
+      "image": "/com/dilazehra/Images/backgrounds/background4.png",
+      "avatar":"/com/dilazehra/Images/avatars/mike.png"
+
+    },
+    {
+      "text": "“Yes, it is the best thing I have done,It’s cost you a mint of money and it’s worth every penny of it.”",
+      "image": "/com/dilazehra/Images/backgrounds/background4.png",
+      "avatar":"/com/dilazehra/Images/avatars/santonix.png"
+    },
+    {
+      "text": "““Come on, Mike”. “pick her up and carry her over the threshold.””",
+      "image": "/com/dilazehra/Images/backgrounds/background4.png",
+      "avatar":"/com/dilazehra/Images/avatars/santonix.png"
+    },
+    {
+      "text": "maybe it was because as I child I had always dreamt of a house of mine",
+      "image": "/com/dilazehra/Images/backgrounds/background2.png",
+      "avatar":"/com/dilazehra/Images/avatars/mike.png"
+    },
+    {
+      "text": "or maybe it was because of the silly agreement I have meade with Santoix, he would build a house for me ",
+      "image": "/com/dilazehra/Images/backgrounds/background2.png",
+      "avatar":"/com/dilazehra/Images/avatars/mike.png"
+    },
+    {
+      "text": "and I would bring “the love of my life” and I would live “happy ever afterwards” in that house with that girl.",
+      "image": "/com/dilazehra/Images/backgrounds/background2.png",
+      "avatar":"/com/dilazehra/Images/avatars/mike.png"
+    },
+    {
+      "text": "I was a young fool longing for something I was never likely to have...",
+      "image": "/com/dilazehra/Images/backgrounds/background2.png",
+      "avatar":"/com/dilazehra/Images/avatars/mike.png"
+    }
   ]
 }

@@ -1,21 +1,18 @@
 package com.dilazehra.endless_night.gameLogic;
 
-
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.json.JSONObject;
 import org.json.JSONArray;
-
 
 
 
 public class JSONManager {
 
     private static JSONObject jsonData = null;
-    private static final String DATAPATH = "com/dilazehra/sceneInfo.json";
+    private static final String DATAPATH = "C:\\java projects\\endless night\\src\\main\\resources\\com\\dilazehra\\sceneInfo.json";
     // Loads JSON data from a file (only once)
     public static JSONObject loadJsonData()  {
         if (jsonData == null) { // Only load if not already loaded

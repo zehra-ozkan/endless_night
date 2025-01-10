@@ -29,7 +29,7 @@ public class entranceSceneController {
             root = loader.load();
             //image can now be set
             ConverseController cController = loader.getController();
-            cController.setSceneName("scene1");
+            cController.setSceneName("scene2");
 
 
             Stage stage = (Stage) start_btn.getScene().getWindow();

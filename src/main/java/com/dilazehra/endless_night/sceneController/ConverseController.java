@@ -50,7 +50,25 @@ public class ConverseController {
 
 
     //duplicate what to do?
+    private void handleScene(SceneObject obj){
+        if(!obj.getText().equals("NONE")){
+            setText(obj.getText());
+            bottom_text.setOpacity(1);
 
+        }
+        else{
+            bottom_text.setOpacity(0);
+        }
+
+        if(!obj.getAvatar().equals("NONE")){
+            setAvatar(obj.getAvatar());
+            avatar.setOpacity(1);
+
+        }
+        else{
+            avatar.setOpacity(0);
+        }
+    }
     @FXML
     void btn_clicked(ActionEvent event) throws IOException {
         if(event.getSource() == next_btn) {
@@ -59,9 +77,8 @@ public class ConverseController {
 
             if(current < sceneInfo.size()){
                 SceneObject k = sceneInfo.get(current);
+                handleScene(k);
 
-                setText(k.getText());
-                setAvatar(k.getAvatar());
                 setMainImage(k.getBackground());
                 setButtons(5);//TODO NEEDS TO BE FİXED
                 //current++;
@@ -89,59 +106,21 @@ public class ConverseController {
             stage.setScene(scene);
             stage.show();///sdf
         } else if (event.getSource() == back_btn) {
-            if(!Objects.equals(getText(imageName, current), endKey)){
-                setText(getText(imageName, current));
-                setButtons(5);
-                current--;//789465
+
+            current--;
+
+            if(current > 0){
+                SceneObject k = sceneInfo.get(current);
+                handleScene(k);
+
+                setMainImage(k.getBackground());
+                setButtons(5);//TODO NEEDS TO BE FİXED
+
             }
-            else{
-                setButtons(1);//this means the first line of the image
-            }
+
         }
     }
-//
-//    @FXML
-//    void btn_clicked(ActionEvent event) throws IOException {
-//        if(event.getSource() == next_btn) {
-//            boolean pass = false;
-//            if(!Objects.equals(getText(imageName, current), endKey)){
-//                setText(getText(imageName, current));
-//                setButtons(5);//TODO NEEDS TO BE FİXED
-//                current++;
-//                return;
-//            }
-//            else{
-//                setButtons(2);//this means the last line of the image
-//                pass = true;
-//            }
-//            if(!pass) return;
-//
-//            //TODO can be put in a method
-//            FXMLLoader loader = FxmlLoader.load("doubleOptionScene");
-//            root = loader.load();
-//            //image can now be set
-//            DoubleOptionController dController = loader.getController();
-//            dController.setImage(ImageLoader.load("image1.png"));
-//            dController.setLeft_btn("8");
-//            dController.setRight_btn("4");
-//
-//            Stage stage = (Stage) next_btn.getScene().getWindow();
-//
-//            Scene scene = new Scene(root);
-//            stage.setTitle("Hello!");
-//            stage.setScene(scene);
-//            stage.show();///sdf
-//        } else if (event.getSource() == back_btn) {
-//            if(!Objects.equals(getText(imageName, current), endKey)){
-//                setText(getText(imageName, current));
-//                setButtons(5);
-//                current--;//789465
-//            }
-//            else{
-//                setButtons(1);//this means the first line of the image
-//            }
-//        }
-//    }
+
 
     void setText(String text){
         bottom_text.setText(text);
