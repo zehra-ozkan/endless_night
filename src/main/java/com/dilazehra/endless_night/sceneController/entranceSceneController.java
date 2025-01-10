@@ -29,12 +29,8 @@ public class entranceSceneController {
             root = loader.load();
             //image can now be set
             ConverseController cController = loader.getController();
-            cController.setAvatar(ImageLoader.load("cute_avatar.png"));
+            cController.setSceneName("scene1");
 
-
-            cController.setMainImage(ImageLoader.load("image0.png"));
-            cController.setText("there was something and now there is not I am this also known as that now we are toherehe ");
-            cController.setButtons(1);
 
             Stage stage = (Stage) start_btn.getScene().getWindow();
 

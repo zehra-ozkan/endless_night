@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class ImageLoader {
     public static String  load(String path){
-        return "/com/dilazehra/Images/" + path;
+        return "/com/dilazehra/Images/backgrounds" + path;
 
     }
 }
