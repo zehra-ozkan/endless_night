@@ -55,6 +55,9 @@
       "avatar":"/com/dilazehra/Images/avatars/mike.png"
     }
   ],
+
+
+
   "scene2": [
     {
       "text": "Maybe Santoix was trying to warn us when we first saw the mansion of Gipsy’s Acre.",
@@ -92,28 +95,88 @@
     },
     {
       "text": "““Come on, Mike”. “pick her up and carry her over the threshold.””",
-      "image": "/com/dilazehra/Images/backgrounds/background4.png",
+      "image": "/com/dilazehra/Images/backgrounds/background5.png",
       "avatar":"/com/dilazehra/Images/avatars/santonix.png"
     },
     {
-      "text": "maybe it was because as I child I had always dreamt of a house of mine",
-      "image": "/com/dilazehra/Images/backgrounds/background2.png",
+      "text": "“That’s the thing to do when you enter into possession with your bride!”",
+      "image": "/com/dilazehra/Images/backgrounds/background5.png",
       "avatar":"/com/dilazehra/Images/avatars/mike.png"
     },
     {
-      "text": "or maybe it was because of the silly agreement I have meade with Santoix, he would build a house for me ",
-      "image": "/com/dilazehra/Images/backgrounds/background2.png",
+      "text": "W..whatt!!",
+      "image": "/com/dilazehra/Images/backgrounds/background6.png",
+      "avatar":"/com/dilazehra/Images/avatars/ellie.png"
+    },
+    {
+      "text": "new character unlocked, Ellie added to characters",
+      "image": "/com/dilazehra/Images/backgrounds/background6.png",
+        "avatar":"NONE"
+    },
+    {
+      "text": "(... I can feel my ears burning.)",
+      "image": "/com/dilazehra/Images/backgrounds/background7.png",
       "avatar":"/com/dilazehra/Images/avatars/mike.png"
     },
     {
-      "text": "and I would bring “the love of my life” and I would live “happy ever afterwards” in that house with that girl.",
-      "image": "/com/dilazehra/Images/backgrounds/background2.png",
-      "avatar":"/com/dilazehra/Images/avatars/mike.png"
+      "text": "(wish the threshold was a bit longer...)",
+      "image": "/com/dilazehra/Images/backgrounds/background8.png",
+      "avatar":"NONE"
     },
     {
-      "text": "I was a young fool longing for something I was never likely to have...",
-      "image": "/com/dilazehra/Images/backgrounds/background2.png",
+      "text": "“Be good to her, Mike. Take care of her. Don’t let harm come to her. She can’t take care of herself. She thinks she can.”",
+      "image": "/com/dilazehra/Images/backgrounds/background8.png",
+      "avatar":"/com/dilazehra/Images/avatars/santonix.png"
+    },
+    {
+      "text": "“Why should any harm happen to me?”",
+      "image": "/com/dilazehra/Images/backgrounds/background8.png",
+      "avatar":"/com/dilazehra/Images/avatars/ellie.png"
+    },
+        {
+      "text": "“Because it’s a bad world and there are bad people in it, they are everywhere around you”",
+      "image": "/com/dilazehra/Images/backgrounds/background8.png",
+      "avatar":"/com/dilazehra/Images/avatars/santonix.png"
+    },
+        {
+      "text": "“I’d look after you myself, child, if I could,” he said, “but I can’t. It won’t be long now. You’ll have to fend for yourself.”",
+      "image": "/com/dilazehra/Images/backgrounds/background8.png",
+      "avatar":"/com/dilazehra/Images/avatars/santonix.png"
+    },
+    {
+      "text": "Cut out the gipsy’s warning, Santonix, I have had enough of these. “and take us round the house. Every inch of it.”",
+      "image": "/com/dilazehra/Images/backgrounds/background8.png",
       "avatar":"/com/dilazehra/Images/avatars/mike.png"
+    },
+        {
+      "text": "Yeah, they won’t bother us, I have decided to live happily in this mention with Mike",
+      "image": "/com/dilazehra/Images/backgrounds/background8.png",
+      "avatar":"/com/dilazehra/Images/avatars/ellie.png"
+    },
+        {
+      "text": "Come on Santonix, you seriously believe in the Gyps's Acre?",
+      "image": "/com/dilazehra/Images/backgrounds/background8.png",
+      "avatar":"/com/dilazehra/Images/avatars/ellie.png"
+    },
+    {
+      "text": "NONE",
+      "image": "/com/dilazehra/Images/backgrounds/background8.png",
+      "avatar":"NONE"
+    },
+    {
+      "text": "We know better than just to believe in common fairytales...",
+      "image": "/com/dilazehra/Images/backgrounds/background8.png",
+      "avatar":"/com/dilazehra/Images/avatars/santonix.png"
+    },
+    {
+      "text": "Up now, we have a whole mansion ahead of us.",
+      "image": "/com/dilazehra/Images/backgrounds/background8.png",
+      "avatar":"/com/dilazehra/Images/avatars/santonix.png"
+    },
+    {
+      "text": "(It might be my imagination but he looked dead serious for a second)",
+      "image": "/com/dilazehra/Images/backgrounds/background8.png",
+      "avatar":"NONE"
     }
   ]
 }

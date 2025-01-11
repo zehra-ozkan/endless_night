@@ -54,7 +54,6 @@ public class ConverseController {
         if(!obj.getText().equals("NONE")){
             setText(obj.getText());
             bottom_text.setOpacity(1);
-
         }
         else{
             bottom_text.setOpacity(0);
@@ -63,7 +62,6 @@ public class ConverseController {
         if(!obj.getAvatar().equals("NONE")){
             setAvatar(obj.getAvatar());
             avatar.setOpacity(1);
-
         }
         else{
             avatar.setOpacity(0);
@@ -109,7 +107,8 @@ public class ConverseController {
             //todo duplicate
 
             String nextScene = JSONManager.getNextScene(sceneName);
-            System.out.println(sceneName);
+            System.out.println(sceneName);//for debugging
+
             FXMLLoader loader = FxmlLoader.load("converseScene");
             root = loader.load();
             ConverseController cController = loader.getController();
@@ -132,7 +131,6 @@ public class ConverseController {
                 setButtons(5);//TODO NEEDS TO BE FİXED
 
             }
-
         }
     }
 
