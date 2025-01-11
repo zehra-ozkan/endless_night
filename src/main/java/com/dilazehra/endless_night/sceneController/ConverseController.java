@@ -85,26 +85,41 @@ public class ConverseController {
                 return;
             }
             else{
-                //setButtons(2);//this means the last line of the image
                 pass = true;
             }
             if(!pass) return;
 
             //TODO can be put in a method
-            FXMLLoader loader = FxmlLoader.load("doubleOptionScene");
+//            FXMLLoader loader = FxmlLoader.load("doubleOptionScene");
+//            root = loader.load();
+//            //image can now be set
+//            DoubleOptionController dController = loader.getController();
+//            dController.setImage(ImageLoader.load("image1.png"));
+//            dController.setLeft_btn("8");
+//            dController.setRight_btn("4");
+//
+//            Stage stage = (Stage) next_btn.getScene().getWindow();
+//
+//            Scene scene = new Scene(root);
+//            stage.setTitle("Hello!");
+//            stage.setScene(scene);
+//            stage.show();///sdf
+
+            //todo have not added two option scenes
+            //todo duplicate
+
+            String nextScene = JSONManager.getNextScene(sceneName);
+            System.out.println(sceneName);
+            FXMLLoader loader = FxmlLoader.load("converseScene");
             root = loader.load();
-            //image can now be set
-            DoubleOptionController dController = loader.getController();
-            dController.setImage(ImageLoader.load("image1.png"));
-            dController.setLeft_btn("8");
-            dController.setRight_btn("4");
-
+            ConverseController cController = loader.getController();
+            cController.setSceneName(nextScene);
             Stage stage = (Stage) next_btn.getScene().getWindow();
-
             Scene scene = new Scene(root);
             stage.setTitle("Hello!");
             stage.setScene(scene);
-            stage.show();///sdf
+            stage.show();
+
         } else if (event.getSource() == back_btn) {
 
             current--;
@@ -132,7 +147,6 @@ public class ConverseController {
     void setMainImage(String imagePath){
         imageName = imagePath;
         main_image.setImage(new Image(getClass().getResourceAsStream(imagePath)));
-//        main_image.setImage(new Image(imagePath));
     }
 
     //1 means first, 2 means last
@@ -145,7 +159,6 @@ public class ConverseController {
         else if(stat == 2){
             next_btn.setDisable(true);
             back_btn.setDisable(false);
-
         }
         else{
             next_btn.setDisable(false);

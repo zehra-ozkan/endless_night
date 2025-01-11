@@ -1,28 +1,31 @@
 package com.dilazehra.endless_night.gameLogic;
 
 public class SceneObject {
+    String background;
+    String text;
+    String avatar;
+    String nextScene;
+
     public String getBackground() {
         return background;
     }
 
-    String background;
 
     public String getText() {
         return text;
     }
 
-    String text;
 
     public String getAvatar() {
         return avatar;
     }
 
-    String avatar;
 
     public SceneObject(){
         background = null;
         text = null;
         avatar = null;
+        nextScene = null;
     }
     public SceneObject(String text, String background, String avatar) {
         this.background = background;

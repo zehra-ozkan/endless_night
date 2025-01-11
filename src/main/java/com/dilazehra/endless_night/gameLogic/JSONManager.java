@@ -11,14 +11,16 @@ import org.json.JSONArray;
 
 public class JSONManager {
 
-    private static JSONObject jsonData = null;
-    private static final String DATAPATH = "C:\\java projects\\endless night\\src\\main\\resources\\com\\dilazehra\\sceneInfo.json";
-    // Loads JSON data from a file (only once)
-    public static JSONObject loadJsonData()  {
-        if (jsonData == null) { // Only load if not already loaded
+    private static final String SCENEINFOPATH = "src\\main\\resources\\com\\dilazehra\\sceneInfo.json";
+    private static final String NEXTSCENEPATH = "src\\main\\resources\\com\\dilazehra\\nextScenes.json";
 
+    private static JSONObject nextScenes = null;
+    private static JSONObject jsonData = null;
+
+    public static void loadJsonData()  {
+        if (jsonData == null) { // Only load if not already loaded
             try {
-                FileReader fileReader = new FileReader(DATAPATH);
+                FileReader fileReader = new FileReader(SCENEINFOPATH);
                 StringBuilder stringBuilder = new StringBuilder();
                 int i;
                 while ((i = fileReader.read()) != -1) {
@@ -27,21 +29,35 @@ public class JSONManager {
                 fileReader.close();
                 jsonData = new JSONObject(stringBuilder.toString());
             } catch (IOException e) {
-                System.out.println("rah rah rah could not find path");
+                System.out.println("rah rah rah could not find path for scene information");
                 System.out.println(e);
             }
         }
-        return jsonData;
+        //todo repetition, maybe in a method?
+        if (nextScenes == null) { // Only load if not already loaded
+            try {
+                FileReader fileReader = new FileReader(NEXTSCENEPATH);
+                StringBuilder stringBuilder = new StringBuilder();
+                int i;
+                while ((i = fileReader.read()) != -1) {
+                    stringBuilder.append((char) i);
+                }
+                fileReader.close();
+                nextScenes = new JSONObject(stringBuilder.toString());
+            } catch (IOException e) {
+                System.out.println("rah rah rah could not find path for next");
+                System.out.println(e);
+            }
+        }
     }
 
     public JSONManager() {
-        jsonData = loadJsonData();
+        loadJsonData();
     }
 
     public static List<SceneObject> getSceneArray(String sceneName) throws IOException {
-        if(jsonData == null) {
-            jsonData = loadJsonData();
-        }
+        if(jsonData == null) loadJsonData();
+
         JSONArray sceneArray = jsonData.getJSONArray(sceneName);
         List<SceneObject> sceneSteps = new ArrayList<>();
 
@@ -50,10 +66,13 @@ public class JSONManager {
             String text = step.getString("text");
             String image = step.getString("image");
             String avatar = step.getString("avatar");
-
             sceneSteps.add(new SceneObject(text, image, avatar));
         }
         return sceneSteps;
+    }
+    public static String getNextScene(String sName){
+        if(nextScenes == null) loadJsonData();
+        return nextScenes.getString(sName);
     }
 
 }

@@ -27,9 +27,8 @@ public class entranceSceneController {
             System.out.println("now we start");
             FXMLLoader loader = FxmlLoader.load("converseScene");
             root = loader.load();
-            //image can now be set
             ConverseController cController = loader.getController();
-            cController.setSceneName("scene2");
+            cController.setSceneName("scene1");
 
 
             Stage stage = (Stage) start_btn.getScene().getWindow();
