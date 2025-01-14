@@ -13,6 +13,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -27,25 +29,33 @@ public class ConverseController {
     private Parent root;
     private String imageName;
     private String sceneName;
-    private List<SceneObject> sceneInfo;
+
+    @FXML
+    private AnchorPane rootPane;    private List<SceneObject> sceneInfo;
 
     int current = 0;
 
 
     @FXML
     private TextArea bottom_text;
-
     @FXML
     private ImageView avatar;
-
     @FXML
     private Button next_btn;
-
     @FXML
     private Button back_btn;
-
     @FXML
     private ImageView main_image;
+
+
+    @FXML
+    void keyTyped(KeyEvent event) throws IOException {
+        System.out.println("comes here");
+        if (event.getCode() == javafx.scene.input.KeyCode.SPACE) {
+            System.out.println("Spacebar was typed!");
+            moveForward();
+        }
+    }
 
 
 
@@ -67,57 +77,63 @@ public class ConverseController {
             avatar.setOpacity(0);
         }
     }
+    private void moveForward() throws IOException {
+        boolean pass = false;
+
+        current++;
+        System.out.println("going forward");
+
+        if(current < sceneInfo.size()){
+            SceneObject k = sceneInfo.get(current);
+            handleScene(k);
+
+            setMainImage(k.getBackground());
+            setButtons(5);//TODO NEEDS TO BE FİXED
+            //current++;
+        }
+        else{
+            pass = true;
+        }
+        if(!pass) return;
+
+        //todo have not added two option scenes
+        //todo duplicate
+
+        String nextScene = JSONManager.getNextScene(sceneName);
+        System.out.println(sceneName);//for debugging
+
+        FXMLLoader loader = FxmlLoader.load("converseScene");
+        root = loader.load();
+        ConverseController cController = loader.getController();
+        cController.setSceneName(nextScene);
+        Stage stage = (Stage) next_btn.getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setTitle("Hello!");
+        stage.setScene(scene);
+        stage.show();
+
+
+    }
     @FXML
     void btn_clicked(ActionEvent event) throws IOException {
         if(event.getSource() == next_btn) {
-            boolean pass = false;
-            current++;
-
-            if(current < sceneInfo.size()){
-                SceneObject k = sceneInfo.get(current);
-                handleScene(k);
-
-                setMainImage(k.getBackground());
-                setButtons(5);//TODO NEEDS TO BE FİXED
-                //current++;
-                return;
-            }
-            else{
-                pass = true;
-            }
-            if(!pass) return;
-
-            //TODO can be put in a method
-//            FXMLLoader loader = FxmlLoader.load("doubleOptionScene");
-//            root = loader.load();
-//            //image can now be set
-//            DoubleOptionController dController = loader.getController();
-//            dController.setImage(ImageLoader.load("image1.png"));
-//            dController.setLeft_btn("8");
-//            dController.setRight_btn("4");
+          moveForward();
 //
-//            Stage stage = (Stage) next_btn.getScene().getWindow();
+//            current++;
+//            System.out.println("going forward");
 //
-//            Scene scene = new Scene(root);
-//            stage.setTitle("Hello!");
-//            stage.setScene(scene);
-//            stage.show();///sdf
-
-            //todo have not added two option scenes
-            //todo duplicate
-
-            String nextScene = JSONManager.getNextScene(sceneName);
-            System.out.println(sceneName);//for debugging
-
-            FXMLLoader loader = FxmlLoader.load("converseScene");
-            root = loader.load();
-            ConverseController cController = loader.getController();
-            cController.setSceneName(nextScene);
-            Stage stage = (Stage) next_btn.getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setTitle("Hello!");
-            stage.setScene(scene);
-            stage.show();
+//            if(current < sceneInfo.size()){
+//                SceneObject k = sceneInfo.get(current);
+//                handleScene(k);
+//
+//                setMainImage(k.getBackground());
+//                setButtons(5);//TODO NEEDS TO BE FİXED
+//                //current++;
+//                return;
+//            }
+//            else{
+//                pass = true;
+//            }
 
         } else if (event.getSource() == back_btn) {
 
@@ -131,6 +147,8 @@ public class ConverseController {
                 setButtons(5);//TODO NEEDS TO BE FİXED
 
             }
+            System.out.println("going backward");
+
         }
     }
 
