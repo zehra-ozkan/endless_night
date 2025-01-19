@@ -33,12 +33,13 @@
     -fx-focus-traversable: false;
     -fx-opacity: 0;
     -fx-pointer-events: none;
+    -fx-mouse-transparent: true; /* Allow interaction with elements underneath */
+
 }
+
 #close_btn {
     -fx-background-color: orange;
     -fx-padding: 2px;
     -fx-max-height: 15px;
     -fx-max-width: 20px;
-
-
 }

@@ -32,7 +32,8 @@ public class ConverseController {
     private String sceneName;
 
     @FXML
-    private AnchorPane rootPane;    private List<SceneObject> sceneInfo;
+    private Pane rootPane;
+    private List<SceneObject> sceneInfo;
 
     int current = 0;
 
@@ -67,28 +68,6 @@ public class ConverseController {
 
 
 
-    //duplicate what to do?
-    private void handleScene(SceneObject obj){
-        if(!obj.getText().equals("NONE")){
-            setText(obj.getText());
-            bottom_text.setOpacity(1);
-        }
-        else{
-            bottom_text.setOpacity(0);
-        }
-
-        if(!obj.getAvatar().equals("NONE")){
-            setAvatar(obj.getAvatar());
-            avatar.setOpacity(1);
-        }
-        else{
-            avatar.setOpacity(0);
-        }
-        if(!obj.getBackground().equals("SAME")) {
-            setMainImage(obj.getBackground());
-        }
-
-    }
     private void moveForward() throws IOException {
         boolean pass = false;
 
@@ -136,7 +115,7 @@ public class ConverseController {
 
             current--;
 
-            if(current > 0){
+            if(current >= 0){
                 SceneObject k = sceneInfo.get(current);
                 handleScene(k);
 
@@ -148,16 +127,17 @@ public class ConverseController {
 
         }
     }
+
+
     @FXML
     void menu_on(ActionEvent event) {
         menu_pane.setOpacity(1);
-        rootPane.setOpacity(0.85);
+        rootPane.setOpacity(0.45);
         System.out.println("menu is now on ");
         close_btn.setDisable(false);
         menu_pane.setMouseTransparent(false);
 
     }
-
     @FXML
     void menu_off(ActionEvent event) {
         rootPane.setOpacity(1);
@@ -165,9 +145,8 @@ public class ConverseController {
         close_btn.setDisable(true);
         System.out.println("menu is off now");
         menu_pane.setMouseTransparent(true);
-
-
     }
+
 
 
     void setText(String text){
@@ -208,7 +187,30 @@ public class ConverseController {
         setText(k.getText());
         setAvatar(k.getAvatar());
         setMainImage(k.getBackground());
-        setButtons(1);//TODO NEEDS TO BE FİXED
+        setButtons(1);
+    }
+
+    //duplicate what to do?
+    private void handleScene(SceneObject obj){
+        if(!obj.getText().equals("NONE")){
+            setText(obj.getText());
+            bottom_text.setOpacity(1);
+        }
+        else{
+            bottom_text.setOpacity(0);
+        }
+
+        if(!obj.getAvatar().equals("NONE")){
+            setAvatar(obj.getAvatar());
+            avatar.setOpacity(1);
+        }
+        else{
+            avatar.setOpacity(0);
+        }
+        if(!obj.getBackground().equals("SAME")) {
+            setMainImage(obj.getBackground());
+        }
+
     }
 
 }

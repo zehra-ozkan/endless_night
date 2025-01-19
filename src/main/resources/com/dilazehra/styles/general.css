@@ -1,5 +1,5 @@
 .root_container {
-    -fx-background-color: #000000;
+    -fx-background-color: #ffffff;
     /*-fx-pref-width: 100%; !* Avoid fixed sizes *!*/
     /*-fx-pref-height: 100%;*/
     -fx-min-width: 600px; /* Set minimum size */

@@ -14,70 +14,74 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootPane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" onKeyPressed="#keyTyped" prefHeight="400.0" prefWidth="615.0" styleClass="root_container" stylesheets="@../styles/general.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dilazehra.endless_night.sceneController.ConverseController">
+<AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="657.0" stylesheets="@../styles/general.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dilazehra.endless_night.sceneController.ConverseController">
    <children>
-      <ImageView fx:id="main_image" fitHeight="406.0" fitWidth="611.0" focusTraversable="true" layoutX="-8.0" pickOnBounds="true" smooth="false" />
-      <Button id="menu_btn" fx:id="menu_btn" focusTraversable="false" layoutX="494.0" layoutY="25.0" mnemonicParsing="false" onAction="#menu_on" prefWidth="94.0" stylesheets="@../styles/menu.css" text="k" />
-      <HBox layoutX="14.0" layoutY="293.0" prefHeight="100.0" prefWidth="534.0" styleClass="hbox" stylesheets="@../styles/general.css">
+      <Pane fx:id="rootPane" onKeyPressed="#keyTyped" prefHeight="400.0" prefWidth="657.0">
          <children>
-            <ImageView fx:id="avatar" disable="true" fitHeight="102.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
-               <HBox.margin>
-                  <Insets right="10.0" />
-               </HBox.margin>
-               <image>
-                  <Image url="@../Images/avatars/mike.png" />
-               </image>
-               <effect>
-                  <Blend />
-               </effect>
-            </ImageView>
-            <TextArea fx:id="bottom_text" disable="true" editable="false" focusTraversable="false" prefHeight="100.0" prefWidth="417.0" styleClass="text_area" text="this">
-               <stylesheets>
-                  <URL value="@../styles/general.css" />
-                  <URL value="@../styles/conversation_scene.css" />
-               </stylesheets>
-            </TextArea>
-            <VBox alignment="CENTER" centerShape="false" minHeight="-Infinity" minWidth="-Infinity" prefHeight="98.0" prefWidth="30.0">
+            <ImageView fx:id="main_image" fitHeight="406.0" fitWidth="666.0" focusTraversable="true" layoutY="-3.0" pickOnBounds="true" smooth="false" />
+            <HBox layoutX="53.0" layoutY="297.0" prefHeight="100.0" prefWidth="534.0" styleClass="hbox" stylesheets="@../styles/general.css">
                <children>
-                  <Button fx:id="next_btn" focusTraversable="false" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btn_clicked" prefHeight="30.0" prefWidth="54.0" styleClass="converse_btn">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
+                  <ImageView fx:id="avatar" disable="true" fitHeight="102.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../Images/avatars/mike.png" />
+                     </image>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </ImageView>
+                  <TextArea fx:id="bottom_text" disable="true" editable="false" focusTraversable="false" prefHeight="100.0" prefWidth="417.0" styleClass="text_area" text="this">
                      <stylesheets>
                         <URL value="@../styles/general.css" />
                         <URL value="@../styles/conversation_scene.css" />
                      </stylesheets>
-                     <graphic>
-                        <ImageView fitHeight="28.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Images/Icons/next.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="back_btn" focusTraversable="false" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btn_clicked" prefHeight="38.0" prefWidth="54.0" styleClass="converse_btn">
-                     <stylesheets>
-                        <URL value="@../styles/general.css" />
-                        <URL value="@../styles/conversation_scene.css" />
-                     </stylesheets>
-                     <graphic>
-                        <ImageView fitHeight="29.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Images/Icons/back.png" />
-                           </image>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </ImageView>
-                     </graphic>
-                  </Button>
+                  </TextArea>
+                  <VBox alignment="CENTER" centerShape="false" minHeight="-Infinity" minWidth="-Infinity" prefHeight="98.0" prefWidth="30.0">
+                     <children>
+                        <Button fx:id="next_btn" focusTraversable="false" mnemonicParsing="false" onAction="#btn_clicked" prefHeight="30.0" prefWidth="41.0" styleClass="converse_btn">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <stylesheets>
+                              <URL value="@../styles/general.css" />
+                              <URL value="@../styles/conversation_scene.css" />
+                           </stylesheets>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/Icons/next.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="back_btn" focusTraversable="false" mnemonicParsing="false" onAction="#btn_clicked" prefHeight="38.0" prefWidth="54.0" styleClass="converse_btn">
+                           <stylesheets>
+                              <URL value="@../styles/general.css" />
+                              <URL value="@../styles/conversation_scene.css" />
+                           </stylesheets>
+                           <graphic>
+                              <ImageView fitHeight="29.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/Icons/back.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
                </children>
-            </VBox>
+            </HBox>
+            <Button id="menu_btn" fx:id="menu_btn" focusTraversable="false" layoutX="587.0" layoutY="14.0" mnemonicParsing="false" onAction="#menu_on" prefWidth="94.0" stylesheets="@../styles/menu.css" text="k" />
          </children>
-      </HBox>
-      <Pane id="menu_pane" fx:id="menu_pane" cacheShape="false" layoutX="27.0" layoutY="55.0" prefHeight="230.0" prefWidth="566.0" stylesheets="@../styles/menu.css">
+      </Pane>
+      <Pane id="menu_pane" fx:id="menu_pane" layoutX="14.0" layoutY="35.0" prefHeight="345.0" prefWidth="631.0" stylesheets="@../styles/menu.css">
          <children>
-            <Button id="close_btn" fx:id="close_btn" disable="true" focusTraversable="false" layoutY="3.0" maxHeight="50.0" maxWidth="53.0" minWidth="53.0" mnemonicParsing="false" onAction="#menu_off" prefHeight="27.0" prefWidth="53.0" stylesheets="@../styles/menu.css" text="x" />
+            <Button id="close_btn" fx:id="close_btn" maxHeight="26.0" maxWidth="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#menu_off" prefHeight="26.0" prefWidth="30.0" stylesheets="@../styles/menu.css" text="x" />
          </children>
       </Pane>
    </children>
