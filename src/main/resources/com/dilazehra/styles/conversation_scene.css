@@ -26,8 +26,11 @@
 
 }
 .converse_btn:hover{
-
     -fx-font-size: 18px;
+}
+.converse_btn:pressed{
+    -fx-font-size: 18px;
+    -fxbackground-color: blue;
 }
 
 

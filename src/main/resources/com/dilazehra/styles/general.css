@@ -1,7 +1,7 @@
 .root_container {
-    -fx-background-color: lightblue;
-    -fx-pref-width: 100%; /* Avoid fixed sizes */
-    -fx-pref-height: 100%;
+    -fx-background-color: #000000;
+    /*-fx-pref-width: 100%; !* Avoid fixed sizes *!*/
+    /*-fx-pref-height: 100%;*/
     -fx-min-width: 600px; /* Set minimum size */
     -fx-min-height: 400px; /* Set minimum size */
 }
@@ -41,4 +41,8 @@
     -fx-font-size: 24px; /* Font size */
     -fx-font-weight: 600;
 
+}
+.tool_tip{
+    -fx-background-color: black;
+    -fx-text-fill: #fbff98;
 }

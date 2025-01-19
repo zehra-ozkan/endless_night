@@ -1,0 +1,44 @@
+/* Button styling */
+#menu_btn {
+    -fx-background-color: blue;
+    -fx-pref-width: 50px;
+    -fx-pref-height: 50px;
+}
+
+#menu_btn:hover {
+    -fx-background-color: black;
+    -fx-text-fill: blue;
+}
+
+#menu_btn:pressed{
+    -fx-opacity: 0.85;
+}
+
+
+/*ty Change background color of the menu_pane when button is pressed */
+
+/* Tooltip styling */
+.tooltip {
+    -fx-background-color: rgba(0, 0, 255, 0.35);
+    -fx-text-fill: #ffdbff;
+    -fx-font-weight: 700;
+    -fx-font-family: "Bodoni MT Condensed";
+    -fx-padding: 5px;
+    -fx-font-size: 16px;
+}
+
+#menu_pane {
+    -fx-background-color: purple;
+    -fx-border-radius: 4px;
+    -fx-focus-traversable: false;
+    -fx-opacity: 0;
+    -fx-pointer-events: none;
+}
+#close_btn {
+    -fx-background-color: orange;
+    -fx-padding: 2px;
+    -fx-max-height: 15px;
+    -fx-max-width: 20px;
+
+
+}

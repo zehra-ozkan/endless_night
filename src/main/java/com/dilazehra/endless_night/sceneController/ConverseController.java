@@ -15,6 +15,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -46,6 +47,13 @@ public class ConverseController {
     private Button back_btn;
     @FXML
     private ImageView main_image;
+    @FXML
+    private Button menu_btn;
+    @FXML
+    private Button close_btn;
+
+    @FXML
+    private Pane menu_pane;
 
 
     @FXML
@@ -76,6 +84,10 @@ public class ConverseController {
         else{
             avatar.setOpacity(0);
         }
+        if(!obj.getBackground().equals("SAME")) {
+            setMainImage(obj.getBackground());
+        }
+
     }
     private void moveForward() throws IOException {
         boolean pass = false;
@@ -86,10 +98,7 @@ public class ConverseController {
         if(current < sceneInfo.size()){
             SceneObject k = sceneInfo.get(current);
             handleScene(k);
-
-            setMainImage(k.getBackground());
             setButtons(5);//TODO NEEDS TO BE FİXED
-            //current++;
         }
         else{
             pass = true;
@@ -98,6 +107,7 @@ public class ConverseController {
 
         //todo have not added two option scenes
         //todo duplicate
+        //moves up to the next scene
 
         String nextScene = JSONManager.getNextScene(sceneName);
         System.out.println(sceneName);//for debugging
@@ -111,31 +121,18 @@ public class ConverseController {
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
+        setButtons(5);
 
 
     }
     @FXML
     void btn_clicked(ActionEvent event) throws IOException {
         if(event.getSource() == next_btn) {
+            System.out.println("move forward pressed");
           moveForward();
-//
-//            current++;
-//            System.out.println("going forward");
-//
-//            if(current < sceneInfo.size()){
-//                SceneObject k = sceneInfo.get(current);
-//                handleScene(k);
-//
-//                setMainImage(k.getBackground());
-//                setButtons(5);//TODO NEEDS TO BE FİXED
-//                //current++;
-//                return;
-//            }
-//            else{
-//                pass = true;
-//            }
 
         } else if (event.getSource() == back_btn) {
+            System.out.println("move back pressed");
 
             current--;
 
@@ -143,13 +140,33 @@ public class ConverseController {
                 SceneObject k = sceneInfo.get(current);
                 handleScene(k);
 
-                setMainImage(k.getBackground());
+               // setMainImage(k.getBackground());
                 setButtons(5);//TODO NEEDS TO BE FİXED
 
             }
             System.out.println("going backward");
 
         }
+    }
+    @FXML
+    void menu_on(ActionEvent event) {
+        menu_pane.setOpacity(1);
+        rootPane.setOpacity(0.85);
+        System.out.println("menu is now on ");
+        close_btn.setDisable(false);
+        menu_pane.setMouseTransparent(false);
+
+    }
+
+    @FXML
+    void menu_off(ActionEvent event) {
+        rootPane.setOpacity(1);
+        menu_pane.setOpacity(0);
+        close_btn.setDisable(true);
+        System.out.println("menu is off now");
+        menu_pane.setMouseTransparent(true);
+
+
     }
 
 

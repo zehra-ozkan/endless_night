@@ -7,19 +7,19 @@
     },
     {
       "text": "but what does it really mean?",
-      "image": "/com/dilazehra/Images/backgrounds/background1.png",
+      "image": "SAME",
       "avatar":"/com/dilazehra/Images/avatars/mike.png"
 
     },
     {
       "text": "Is there ever any particular spot where one can put one’s finger and say: ",
-      "image": "/com/dilazehra/Images/backgrounds/background1.png",
+      "image": "SAME",
       "avatar":"/com/dilazehra/Images/avatars/mike.png"
 
     },
     {
       "text": "“It all began that day, at such a time and such a place, with such an incident?”",
-      "image": "/com/dilazehra/Images/backgrounds/background1.png",
+      "image": "SAME",
       "avatar":"/com/dilazehra/Images/avatars/mike.png"
 
     }
@@ -31,17 +31,17 @@
     },
     {
       "text": "the property was in its prime as it was seven or maybe 8 hundreds of years ago",
-      "image": "/com/dilazehra/Images/backgrounds/background2.png",
+      "image": "SAME",
       "avatar":"/com/dilazehra/Images/avatars/mike.png"
     },
     {
       "text": "maybe it was because as I child I had always dreamt of a house of mine",
-      "image": "/com/dilazehra/Images/backgrounds/background2.png",
+      "image": "SAME",
       "avatar":"/com/dilazehra/Images/avatars/mike.png"
     },
     {
       "text": "or maybe it was because of the silly agreement I have meade with Santoix, he would build a house for me ",
-      "image": "/com/dilazehra/Images/backgrounds/background2.png",
+      "image": "SAME",
       "avatar":"/com/dilazehra/Images/avatars/mike.png"
     },
     {
@@ -66,7 +66,7 @@
     },
     {
       "text": "NONE",
-      "image": "/com/dilazehra/Images/backgrounds/background3.png",
+      "image": "SAME",
       "avatar":"NONE"
 
     },
@@ -83,24 +83,24 @@
 
     }
   ,{
-      "text": "“It’s the tops,”.A silly thing to say but he knew what I meant.",
-      "image": "/com/dilazehra/Images/backgrounds/background4.png",
+      "text": "“It’s the tops,”A silly thing to say but I think he knows what I mean.",
+      "image": "SAME",
       "avatar":"/com/dilazehra/Images/avatars/mike.png"
 
     },
     {
       "text": "“Yes, it is the best thing I have done,It’s cost you a mint of money and it’s worth every penny of it.”",
-      "image": "/com/dilazehra/Images/backgrounds/background4.png",
+      "image": "SAME",
       "avatar":"/com/dilazehra/Images/avatars/santonix.png"
     },
     {
-      "text": "““Come on, Mike”. “pick her up and carry her over the threshold.””",
+      "text": "Come on, Mike”. pick her up and carry her over the threshold.",
       "image": "/com/dilazehra/Images/backgrounds/background5.png",
       "avatar":"/com/dilazehra/Images/avatars/santonix.png"
     },
     {
       "text": "“That’s the thing to do when you enter into possession with your bride!”",
-      "image": "/com/dilazehra/Images/backgrounds/background5.png",
+      "image": "SAME",
       "avatar":"/com/dilazehra/Images/avatars/santonix.png"
     },
     {
@@ -110,7 +110,7 @@
     },
     {
       "text": "new character unlocked, Ellie added to characters",
-      "image": "/com/dilazehra/Images/backgrounds/background6.png",
+      "image": "SAME",
         "avatar":"NONE"
     },
     {
@@ -125,7 +125,7 @@
     },
     {
       "text": "“Be good to her, Mike. Take care of her. Don’t let harm come to her. She can’t take care of herself. She thinks she can.”",
-      "image": "/com/dilazehra/Images/backgrounds/background8.png",
+      "image": "SAME",
       "avatar":"/com/dilazehra/Images/avatars/santonix.png"
     },
     {
@@ -154,7 +154,7 @@
       "avatar":"/com/dilazehra/Images/avatars/ellie.png"
     },
         {
-      "text": "Come on Santonix, you seriously believe in the Gyps's Acre?",
+      "text": "Come on Santonix, you seriously believe in the Gypsy's Acre?",
       "image": "/com/dilazehra/Images/backgrounds/background8.png",
       "avatar":"/com/dilazehra/Images/avatars/ellie.png"
     },
@@ -205,18 +205,18 @@
 
     }
   ,{
-      "text": "“It’s the tops,”.A silly thing to say but he knew what I meant.",
+      "text": "It’s the tops,”.",
       "image": "/com/dilazehra/Images/backgrounds/background4.png",
       "avatar":"/com/dilazehra/Images/avatars/mike.png"
 
     },
     {
-      "text": "“Yes, it is the best thing I have done,It’s cost you a mint of money and it’s worth every penny of it.”",
+      "text": "Yes, it is the best thing I have done,It’s cost you a mint of money and it’s worth every penny of it.",
       "image": "/com/dilazehra/Images/backgrounds/background4.png",
       "avatar":"/com/dilazehra/Images/avatars/santonix.png"
     },
     {
-      "text": "““Come on, Mike”. “pick her up and carry her over the threshold.””",
+      "text": "Come on, Mike. Pick her up and carry her over the threshold.",
       "image": "/com/dilazehra/Images/backgrounds/background5.png",
       "avatar":"/com/dilazehra/Images/avatars/santonix.png"
     },
@@ -246,7 +246,7 @@
       "avatar":"NONE"
     },
     {
-      "text": "“Be good to her, Mike. Take care of her. Don’t let harm come to her. She can’t take care of herself. She thinks she can.”",
+      "text": "Be good to her, Mike. Take care of her. Don’t let harm come to her. She can’t take care of herself. She thinks she can.",
       "image": "/com/dilazehra/Images/backgrounds/background8.png",
       "avatar":"/com/dilazehra/Images/avatars/santonix.png"
     },
@@ -300,5 +300,5 @@
       "image": "/com/dilazehra/Images/backgrounds/background8.png",
       "avatar":"NONE"
     }
-  ],
+  ]
 }
