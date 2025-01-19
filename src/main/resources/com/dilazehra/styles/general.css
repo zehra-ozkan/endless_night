@@ -1,9 +1,10 @@
 .root_container {
     -fx-background-color: #ffffff;
-    /*-fx-pref-width: 100%; !* Avoid fixed sizes *!*/
-    /*-fx-pref-height: 100%;*/
-    -fx-min-width: 600px; /* Set minimum size */
-    -fx-min-height: 400px; /* Set minimum size */
+
+    -fx-pref-width: 1000; /* Avoid fixed sizes */
+    -fx-pref-height: 750;
+    /*-fx-min-width: 600px; !* Set minimum size *!*/
+    /*-fx-min-height: 400px; !* Set minimum size *!*/
 }
 .button {
     -fx-background-color: #f869f8;
