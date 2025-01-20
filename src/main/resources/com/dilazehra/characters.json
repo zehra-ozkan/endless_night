@@ -1,0 +1,27 @@
+{
+  "ellie":
+    {
+      "image":"/com/dilazehra/Images/characters/ellie.png",
+      "name": "Fenella Guteman",
+      "desc": "A wealthy young American woman who becomes Michael’s wife despite her family's objection."
+    }
+  ,
+  "greta":
+    {
+      "image": "/com/dilazehra/Images/characters/ellie.png",
+      "name": "Greta Andersen",
+      "desc": "Ellie’s devoted secretary and companion. Lippincott thinks that she controls Ellie"
+    }
+  ,
+  "santonix": {
+    "image":"/com/dilazehra/Images/characters/santonix.png",
+    "name": "Rudolf Santonix",
+    "desc": "The architect whom Michael admires and hires to design his dream home. He is a brilliant and eccentric character with a deep understanding of human desires and aesthetics."
+  },
+
+  "mrsLee":{
+    "image":"/com/dilazehra/Images/characters/santonix.png",
+    "name": "Rudolf Santonix",
+    "desc": "The architect whom Michael admires and hires to design his dream home. He is a brilliant and eccentric character with a deep understanding of human desires and aesthetics."
+  }
+}

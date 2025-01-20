@@ -13,9 +13,13 @@ public class JSONManager {
 
     private static final String SCENEINFOPATH = "src\\main\\resources\\com\\dilazehra\\sceneInfo.json";
     private static final String NEXTSCENEPATH = "src\\main\\resources\\com\\dilazehra\\nextScenes.json";
+    private static final String CHARACTERPATH = "src\\main\\resources\\com\\dilazehra\\characters.json";
+
+    private static final String NEWCHARKEY = "New character added.";
 
     private static JSONObject nextScenes = null;
     private static JSONObject jsonData = null;
+    private static JSONObject characterData = null;
 
     public static void loadJsonData()  {
         if (jsonData == null) { // Only load if not already loaded
@@ -49,6 +53,21 @@ public class JSONManager {
                 System.out.println(e);
             }
         }
+        if (characterData == null) { // Only load if not already loaded
+            try {
+                FileReader fileReader = new FileReader(CHARACTERPATH);
+                StringBuilder stringBuilder = new StringBuilder();
+                int i;
+                while ((i = fileReader.read()) != -1) {
+                    stringBuilder.append((char) i);
+                }
+                fileReader.close();
+                characterData = new JSONObject(stringBuilder.toString());
+            } catch (IOException e) {
+                System.out.println("rah rah rah could not find path for next");
+                System.out.println(e);
+            }
+        }
     }
 
     public JSONManager() {
@@ -70,9 +89,21 @@ public class JSONManager {
         }
         return sceneSteps;
     }
+    public static CharacterObj getCharacter(String characterName) throws IOException {
+        if(characterData == null) loadJsonData();
+        JSONArray ch = jsonData.getJSONArray(characterName);
+        String name = ch.getString(1);
+        String image = ch.getString(0);
+        String text = ch.getString(2);
+
+        return new CharacterObj(name, image, text);
+    }
     public static String getNextScene(String sName){
         if(nextScenes == null) loadJsonData();
         return nextScenes.getString(sName);
+    }
+    public static boolean newCharacter(String text){
+        return text.contains(NEWCHARKEY);
     }
 
 }

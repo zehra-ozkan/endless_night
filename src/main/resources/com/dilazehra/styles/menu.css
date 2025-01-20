@@ -28,7 +28,7 @@
 }
 
 #menu_pane {
-    -fx-background-color: purple;
+    -fx-background-color: transparent;
     -fx-border-radius: 4px;
     -fx-focus-traversable: false;
     -fx-opacity: 0;
@@ -40,6 +40,5 @@
 #close_btn {
     -fx-background-color: orange;
     -fx-padding: 2px;
-    -fx-max-height: 15px;
-    -fx-max-width: 20px;
+
 }

@@ -1,7 +1,7 @@
 package com.dilazehra.endless_night.sceneController;
 
 import com.dilazehra.endless_night.FxmlLoader;
-import com.dilazehra.endless_night.ImageLoader;
+import com.dilazehra.endless_night.gameLogic.CharacterObj;
 import com.dilazehra.endless_night.gameLogic.JSONManager;
 import com.dilazehra.endless_night.gameLogic.SceneObject;
 import javafx.event.ActionEvent;
@@ -11,19 +11,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
-
-import static com.dilazehra.endless_night.GameLogic.endKey;
-import static com.dilazehra.endless_night.GameLogic.getText;
 
 public class ConverseController {
 
@@ -34,9 +31,22 @@ public class ConverseController {
     @FXML
     private Pane rootPane;
     private List<SceneObject> sceneInfo;
+    private List<CharacterObj> characters;
 
     int current = 0;
 
+
+    @FXML
+    private ImageView character_image;
+    @FXML
+    private Button next_character;
+
+    @FXML
+    private Button prev_character;
+    @FXML
+    private TextArea description;
+    @FXML
+    private TextField nameField;
 
     @FXML
     private TextArea bottom_text;
@@ -137,6 +147,11 @@ public class ConverseController {
         close_btn.setDisable(false);
         menu_pane.setMouseTransparent(false);
 
+        //todo maybe for other elements
+        menu_btn.setDisable(true);
+        menu_btn.setOpacity(0);
+
+
     }
     @FXML
     void menu_off(ActionEvent event) {
@@ -145,14 +160,15 @@ public class ConverseController {
         close_btn.setDisable(true);
         System.out.println("menu is off now");
         menu_pane.setMouseTransparent(true);
+
+        //todo maybe for other elements
+        menu_btn.setDisable(false);
+        menu_btn.setOpacity(1);
     }
-
-
 
     void setText(String text){
         bottom_text.setText(text);
     }
-    //path needs to be checked
     void setAvatar(String imagePath){
         avatar.setImage(new Image(getClass().getResourceAsStream(imagePath)));
     }
@@ -181,7 +197,6 @@ public class ConverseController {
         System.out.println(current);
         this.sceneName = sceneName;
         sceneInfo = JSONManager.getSceneArray(sceneName);
-
         SceneObject k = sceneInfo.get(current);
 
         setText(k.getText());
@@ -211,6 +226,23 @@ public class ConverseController {
             setMainImage(obj.getBackground());
         }
 
+        if(JSONManager.newCharacter(obj.getText())){
+
+        }
+    }
+    private void addCharacter(String charName){
+
+    }
+    @FXML
+    public void initialize(){
+        System.out.println("enters initilise");
+        rootPane.setOpacity(1);
+        menu_pane.setOpacity(0);
+        close_btn.setDisable(true);
+        System.out.println("menu is off now");
+        menu_pane.setMouseTransparent(true);
+
+        characters = new ArrayList<>();
     }
 
 }
