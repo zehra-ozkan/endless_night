@@ -1,14 +1,14 @@
 /* Button styling */
 #menu_btn {
-    -fx-background-color: rgb(240, 255, 184);
+    -fx-background-color: black;
     -fx-pref-width: 50px;
     -fx-pref-height: 50px;
-    -fx-text-fill: black;
+    -fx-text-fill: rgb(240, 255, 184);
 }
 
 #menu_btn:hover {
-    -fx-background-color: black;
-    -fx-text-fill: rgb(240, 255, 184);
+    -fx-background-color: rgb(240, 255, 184);
+    -fx-text-fill: black;
 }
 
 #menu_btn:pressed{

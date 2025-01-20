@@ -141,7 +141,7 @@ public class ConverseController {
         System.out.println("menu is now on ");
         close_btn.setDisable(false);
         menu_pane.setMouseTransparent(false);
-        setCharButtons();
+
 
 
         currentCharacter = 0;
@@ -180,13 +180,15 @@ public class ConverseController {
     }
 
     void handleCharacter(){
+        setCharButtons();
         if(characters.isEmpty()) return;
         if(currentCharacter >= characters.size()) return;
-        //maybe some button handling
+
         CharacterObj ch = characters.get(currentCharacter);
         setCharacterImage(ch.getPhoto());
         setCharacterName(ch.getName());
         setCharacterText(ch.getDesc());
+
     }
 
     void setText(String text){
@@ -228,17 +230,19 @@ public class ConverseController {
         }
     }
     //todo terrible logic to be cleared
-    void setCharButtons(){
-        if(currentCharacter == 0){//first
-            prev_character.setDisable(true);
-        }
-        if(currentCharacter == characters.size() -1){//last
+    void setCharButtons() {
+        if (characters.isEmpty()) {
+            // No characters available, disable both buttons
             next_character.setDisable(true);
+            prev_character.setDisable(true);
+            return;
         }
-        if(currentCharacter >0 && currentCharacter < characters.size()){//middle
-            next_character.setDisable(false);
-            prev_character.setDisable(false);
-        }
+
+        // Disable 'next_character' if we are at the last character
+        next_character.setDisable(currentCharacter >= characters.size() - 1);
+
+        // Disable 'prev_character' if we are at the first character
+        prev_character.setDisable(currentCharacter <= 0);
     }
 
     void setSceneName(String sceneName) throws IOException {
