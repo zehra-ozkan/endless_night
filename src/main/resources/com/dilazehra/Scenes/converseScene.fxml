@@ -14,6 +14,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="root_container" stylesheets="@../styles/general.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dilazehra.endless_night.sceneController.ConverseController">
@@ -58,7 +59,7 @@
                            <graphic>
                               <ImageView fitHeight="28.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../Images/Icons/next.png" />
+                                    <Image url="@../Icons/next.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -69,9 +70,9 @@
                               <URL value="@../styles/conversation_scene.css" />
                            </stylesheets>
                            <graphic>
-                              <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../Images/Icons/back.png" />
+                                    <Image url="@../Icons/back.png" />
                                  </image>
                                  <cursor>
                                     <Cursor fx:constant="DEFAULT" />
@@ -95,15 +96,21 @@
                   <Image url="@../icons/characters_icon.png" />
                </image>
             </ImageView>
-            <Pane layoutX="53.0" layoutY="162.0" prefHeight="323.0" prefWidth="809.0" style="-fx-background-color: yellow; -fx-opacity: 1;">
+            <Pane disable="true" layoutX="-58.0" layoutY="162.0" prefHeight="323.0" prefWidth="978.0">
                <children>
-                  <TextField fx:id="nameField" editable="false" focusTraversable="false" layoutX="230.0" layoutY="20.0" prefHeight="50.0" prefWidth="530.0" />
-                  <TextArea fx:id="description" editable="false" focusTraversable="false" layoutX="230.0" layoutY="70.0" prefHeight="236.0" prefWidth="530.0" />
+                  <ImageView fitHeight="323.0" fitWidth="1008.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../Icons/menu_back.jpeg" />
+                     </image>
+                  </ImageView>
+                  <TextField id="name" fx:id="nameField" editable="false" focusTraversable="false" layoutX="371.0" layoutY="20.0" prefHeight="50.0" prefWidth="554.0" stylesheets="@../styles/menu.css" text="character name" />
+                  <Line endX="942.0000610351562" endY="71.99996948242188" fill="#c70c0c" startX="373.9000244140625" startY="71.99996948242188" stroke="#f1ffba" strokeWidth="3.0" />
+                  <TextArea id="desc" fx:id="description" editable="false" focusTraversable="false" layoutX="371.0" layoutY="107.0" prefHeight="199.0" prefWidth="554.0" stylesheets="@../styles/menu.css" text="NO CHARACTERS ADDED, YOU WILL SEE THE ADDED CHARACTERS HERE" />
                </children>
             </Pane>
-            <ImageView fx:id="character_image" fitHeight="415.0" fitWidth="242.0" layoutX="35.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="next_character" focusTraversable="false" layoutX="712.0" layoutY="496.0" mnemonicParsing="false" onAction="#btn_clicked" text="&gt;" />
-            <Button fx:id="prev_character" focusTraversable="false" layoutX="712.0" layoutY="574.0" mnemonicParsing="false" onAction="#btn_clicked" text="&lt;" />
+            <ImageView fx:id="character_image" fitHeight="415.0" fitWidth="232.0" layoutX="65.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="next_character" focusTraversable="false" layoutX="712.0" layoutY="496.0" mnemonicParsing="false" onAction="#btn_clicked" prefHeight="47.0" prefWidth="144.0" text="&gt;" />
+            <Button fx:id="prev_character" focusTraversable="false" layoutX="712.0" layoutY="560.0" mnemonicParsing="false" onAction="#btn_clicked" text="&lt;" />
          </children>
       </Pane>
    </children>

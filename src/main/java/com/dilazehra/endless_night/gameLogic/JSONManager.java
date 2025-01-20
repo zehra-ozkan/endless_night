@@ -89,12 +89,13 @@ public class JSONManager {
         }
         return sceneSteps;
     }
-    public static CharacterObj getCharacter(String characterName) throws IOException {
+    public static CharacterObj getCharacter(String characterName) {
         if(characterData == null) loadJsonData();
-        JSONArray ch = jsonData.getJSONArray(characterName);
-        String name = ch.getString(1);
-        String image = ch.getString(0);
-        String text = ch.getString(2);
+        JSONObject ch = characterData.getJSONObject(characterName);
+        String name = ch.getString("name");
+        String image = ch.getString("image");
+        String text = ch.getString("desc");
+
 
         return new CharacterObj(name, image, text);
     }
@@ -105,5 +106,6 @@ public class JSONManager {
     public static boolean newCharacter(String text){
         return text.contains(NEWCHARKEY);
     }
+
 
 }

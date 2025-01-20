@@ -34,34 +34,23 @@ public class ConverseController {
     private List<CharacterObj> characters;
 
     int current = 0;
+    int currentCharacter;
 
 
     @FXML
     private ImageView character_image;
     @FXML
-    private Button next_character;
+    private Button next_character, prev_character, next_btn, back_btn, menu_btn, close_btn;
 
     @FXML
-    private Button prev_character;
-    @FXML
-    private TextArea description;
+    private TextArea description, bottom_text;
     @FXML
     private TextField nameField;
 
     @FXML
-    private TextArea bottom_text;
-    @FXML
-    private ImageView avatar;
-    @FXML
-    private Button next_btn;
-    @FXML
-    private Button back_btn;
-    @FXML
-    private ImageView main_image;
-    @FXML
-    private Button menu_btn;
-    @FXML
-    private Button close_btn;
+    private ImageView avatar, main_image;
+
+
 
     @FXML
     private Pane menu_pane;
@@ -75,8 +64,6 @@ public class ConverseController {
             moveForward();
         }
     }
-
-
 
     private void moveForward() throws IOException {
         boolean pass = false;
@@ -120,7 +107,8 @@ public class ConverseController {
             System.out.println("move forward pressed");
           moveForward();
 
-        } else if (event.getSource() == back_btn) {
+        }
+        else if (event.getSource() == back_btn) {
             System.out.println("move back pressed");
 
             current--;
@@ -128,13 +116,20 @@ public class ConverseController {
             if(current >= 0){
                 SceneObject k = sceneInfo.get(current);
                 handleScene(k);
-
                // setMainImage(k.getBackground());
                 setButtons(5);//TODO NEEDS TO BE FİXED
-
             }
             System.out.println("going backward");
-
+        }
+        else if(event.getSource() == next_character){
+            currentCharacter++;
+            handleCharacter();
+            setCharButtons();
+        }
+        else if(event.getSource() == prev_character){
+            currentCharacter--;
+            handleCharacter();
+            setCharButtons();
         }
     }
 
@@ -146,10 +141,22 @@ public class ConverseController {
         System.out.println("menu is now on ");
         close_btn.setDisable(false);
         menu_pane.setMouseTransparent(false);
+        setCharButtons();
 
-        //todo maybe for other elements
+
+        currentCharacter = 0;
+        handleCharacter();
+
+        //todo IN A METHOD
         menu_btn.setDisable(true);
         menu_btn.setOpacity(0);
+        bottom_text.setOpacity(0);
+        next_btn.setDisable(true);
+        back_btn.setDisable(true);
+        next_btn.setOpacity(0);
+        back_btn.setOpacity(0);
+        avatar.setOpacity(0);
+
 
 
     }
@@ -161,9 +168,25 @@ public class ConverseController {
         System.out.println("menu is off now");
         menu_pane.setMouseTransparent(true);
 
-        //todo maybe for other elements
+        //todo IN A METHOD
         menu_btn.setDisable(false);
         menu_btn.setOpacity(1);
+        bottom_text.setOpacity(1);
+        next_btn.setDisable(false);
+        back_btn.setDisable(false);
+        next_btn.setOpacity(1);
+        back_btn.setOpacity(1);
+        avatar.setOpacity(1);
+    }
+
+    void handleCharacter(){
+        if(characters.isEmpty()) return;
+        if(currentCharacter >= characters.size()) return;
+        //maybe some button handling
+        CharacterObj ch = characters.get(currentCharacter);
+        setCharacterImage(ch.getPhoto());
+        setCharacterName(ch.getName());
+        setCharacterText(ch.getDesc());
     }
 
     void setText(String text){
@@ -172,6 +195,17 @@ public class ConverseController {
     void setAvatar(String imagePath){
         avatar.setImage(new Image(getClass().getResourceAsStream(imagePath)));
     }
+
+    void setCharacterImage(String imagePath){
+        character_image.setImage(new Image(getClass().getResourceAsStream(imagePath)));
+    }
+    void setCharacterName(String name){
+        nameField.setText(name);
+    }
+    void setCharacterText(String t){
+        description.setText(t);
+    }
+
     void setMainImage(String imagePath){
         imageName = imagePath;
         main_image.setImage(new Image(getClass().getResourceAsStream(imagePath)));
@@ -193,6 +227,20 @@ public class ConverseController {
             back_btn.setDisable(false);
         }
     }
+    //todo terrible logic to be cleared
+    void setCharButtons(){
+        if(currentCharacter == 0){//first
+            prev_character.setDisable(true);
+        }
+        if(currentCharacter == characters.size() -1){//last
+            next_character.setDisable(true);
+        }
+        if(currentCharacter >0 && currentCharacter < characters.size()){//middle
+            next_character.setDisable(false);
+            prev_character.setDisable(false);
+        }
+    }
+
     void setSceneName(String sceneName) throws IOException {
         System.out.println(current);
         this.sceneName = sceneName;
@@ -227,11 +275,23 @@ public class ConverseController {
         }
 
         if(JSONManager.newCharacter(obj.getText())){
-
+            System.out.println("adding character");
+            String t = obj.getText();
+            String[] m = t.split(" ");
+            System.out.println("character name = " + m[3]);
+            addCharacter(m[3]);
         }
     }
-    private void addCharacter(String charName){
+    private void addCharacter(String charName)  {
+        if(included(charName)){
+            System.out.println("character is already included");
+            return;
+        }
 
+        CharacterObj ch = JSONManager.getCharacter(charName);
+        characters.add(ch);
+        System.out.println("character added. size = " + characters.size());
+        setCharButtons();
     }
     @FXML
     public void initialize(){
@@ -243,6 +303,14 @@ public class ConverseController {
         menu_pane.setMouseTransparent(true);
 
         characters = new ArrayList<>();
+    }
+    private boolean included(String name){
+        for(CharacterObj ch : characters){
+            if(ch.getName().equals(name)){
+                return true;
+            }
+        }
+        return false;
     }
 
 }
