@@ -234,15 +234,37 @@ public class ConverseController {
         if (characters.isEmpty()) {
             // No characters available, disable both buttons
             next_character.setDisable(true);
+            next_character.setOpacity(0);
+
             prev_character.setDisable(true);
+            prev_character.setOpacity(0);
+
             return;
         }
+//
+//        // Disable 'next_character' if we are at the last character
+//        next_character.setDisable(currentCharacter >= characters.size() - 1);
+//
+//        // Disable 'prev_character' if we are at the first character
+//        prev_character.setDisable(currentCharacter <= 0);
 
-        // Disable 'next_character' if we are at the last character
-        next_character.setDisable(currentCharacter >= characters.size() - 1);
+        if(currentCharacter >= characters.size() - 1){
+            next_character.setDisable(true);
+            next_character.setOpacity(0);
+        }
+        else{
+            next_character.setDisable(false);
+            next_character.setOpacity(1);
+        }
 
-        // Disable 'prev_character' if we are at the first character
-        prev_character.setDisable(currentCharacter <= 0);
+        if(currentCharacter <= 0){
+            prev_character.setDisable(true);
+            prev_character.setOpacity(0);
+        }
+        else{
+            prev_character.setDisable(false);
+            prev_character.setOpacity(1);
+        }
     }
 
     void setSceneName(String sceneName) throws IOException {
@@ -268,7 +290,7 @@ public class ConverseController {
         }
 
         if(!obj.getAvatar().equals("NONE")){
-            setAvatar(obj.getAvatar());
+            if(!obj.getAvatar().equals("SAME")) setAvatar(obj.getAvatar());
             avatar.setOpacity(1);
         }
         else{
@@ -278,12 +300,25 @@ public class ConverseController {
             setMainImage(obj.getBackground());
         }
 
-        if(JSONManager.newCharacter(obj.getText())){
+        //finding character name logic
+//        if(JSONManager.newCharacter(obj.getText())){
+//            System.out.println("adding character");
+//            String t = obj.getText();
+//            String[] m = t.split(" ");
+//            System.out.println("character name = " + m[3]);
+//            addCharacter(m[3]);
+//        }
+        if (JSONManager.newCharacter(obj.getText())) {
             System.out.println("adding character");
             String t = obj.getText();
-            String[] m = t.split(" ");
-            System.out.println("character name = " + m[3]);
-            addCharacter(m[3]);
+
+            // Remove the fixed part of the string
+            String name = t.replaceFirst("New character added\\. ", "")  // Remove beginning
+                    .replaceFirst(" unlocked.", "")     // Remove ending
+                    .trim();
+
+            System.out.println("character name = " + name);
+            addCharacter(name);
         }
     }
     private void addCharacter(String charName)  {

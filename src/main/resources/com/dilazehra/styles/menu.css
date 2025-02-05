@@ -45,14 +45,14 @@
 
 #desc {
     -fx-opacity: 1;
-    -fx-text-fill: black;
+    -fx-text-fill: #ffdbff;
     -fx-background-color: transparent;
     -fx-control-inner-background: transparent;
     -fx-font-family: "Bodoni MT Condensed";
     -fx-padding: 1px;
     -fx-font-size: 22px;
     -fx-wrap-text: true;
-    -fx-font-weight: 700;
+    -fx-font-weight: 800;
 
 }
 #desc .content {
@@ -65,7 +65,7 @@
 #name{
     -fx-opacity: 1;
     -fx-background-color: transparent;
-    -fx-text-fill: black;
+    -fx-text-fill: #ffdbff;
     -fx-font-family: "Bodoni MT Condensed";
     -fx-padding: 1px;
     -fx-font-size: 22px;

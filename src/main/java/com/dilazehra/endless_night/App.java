@@ -14,7 +14,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        game = new GameLogic();
+        //game = new GameLogic();
         //FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/dilazehra/Scenes/enranceScene.fxml"));
         FXMLLoader fxmlLoader = FxmlLoader.load("enranceScene");
         Scene scene = new Scene(fxmlLoader.load());

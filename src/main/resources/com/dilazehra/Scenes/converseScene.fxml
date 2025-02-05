@@ -100,7 +100,7 @@
                <children>
                   <ImageView fitHeight="323.0" fitWidth="1008.0" pickOnBounds="true">
                      <image>
-                        <Image url="@../Icons/menu_back.jpeg" />
+                        <Image url="@../Icons/n.jpg" />
                      </image>
                   </ImageView>
                   <TextField id="name" fx:id="nameField" editable="false" focusTraversable="false" layoutX="371.0" layoutY="20.0" prefHeight="50.0" prefWidth="554.0" stylesheets="@../styles/menu.css" text="character name" />
@@ -109,8 +109,22 @@
                </children>
             </Pane>
             <ImageView fx:id="character_image" fitHeight="415.0" fitWidth="232.0" layoutX="65.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="next_character" focusTraversable="false" layoutX="712.0" layoutY="496.0" mnemonicParsing="false" onAction="#btn_clicked" prefHeight="47.0" prefWidth="144.0" text="&gt;" />
-            <Button fx:id="prev_character" focusTraversable="false" layoutX="712.0" layoutY="560.0" mnemonicParsing="false" onAction="#btn_clicked" text="&lt;" />
+            <Button fx:id="next_character" focusTraversable="false" layoutX="712.0" layoutY="496.0" mnemonicParsing="false" onAction="#btn_clicked" prefHeight="47.0" prefWidth="144.0">
+               <graphic>
+                  <ImageView fitHeight="63.0" fitWidth="139.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../Icons/next.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="prev_character" focusTraversable="false" layoutX="712.0" layoutY="559.0" mnemonicParsing="false" onAction="#btn_clicked" prefHeight="50.0" prefWidth="144.0">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="133.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../Icons/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
          </children>
       </Pane>
    </children>

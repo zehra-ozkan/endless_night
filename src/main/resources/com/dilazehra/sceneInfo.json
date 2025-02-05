@@ -93,8 +93,8 @@
     },
     {
       "text": "Come on, Mike”. pick her up and carry her over the threshold.",
-      "image": "/com/dilazehra/Images/backgrounds/background5.png",
-      "avatar":"/com/dilazehra/Images/avatars/santonix.png"
+      "image": "SAME",
+      "avatar":"SAME"
     },
     {
       "text": "That’s the thing to do when you enter into possession with your bride!",
@@ -107,7 +107,7 @@
       "avatar":"/com/dilazehra/Images/avatars/ellie.png"
     },
     {
-      "text": "New character added. Ellie added to characters",
+      "text": "New character added. Ellie unlocked.",
       "image": "SAME",
         "avatar":"NONE"
     },
@@ -297,47 +297,194 @@
       "text": "I will not let them get away with this!",
       "image": "SAME",
       "avatar":"/com/dilazehra/Images/avatars/mike.png"
+    },    {
+      "text": "I am going to file a complaint about this tomorrow in the town. We can’t let them be.",
+      "image": "SAME",
+      "avatar":"/com/dilazehra/Images/avatars/mike.png"
+    },
+    {
+      "text": "Mike, is it okay if I call Greta over while you are in town tomorrow?",
+      "image": "SAME",
+      "avatar":"/com/dilazehra/Images/avatars/ellie.png"
+    },
+    {
+      "text": "After what just happened I am not so sure about staying alone in this house. It scares me, at least with Greata around I might feel better.",
+      "image": "SAME",
+      "avatar":"SAME"
+    }
+    ,{
+      "text": "You haven’t met Greta before have you? You can meet her on your way back here.",
+      "image": "SAME",
+      "avatar":"/com/dilazehra/Images/avatars/ellie.png"
+    },
+    {
+      "text": "yeah, sure. I can meet her on my way back.",
+      "image": "SAME",
+      "avatar":"/com/dilazehra/Images/avatars/mike.png"
+    },
+    {
+      "text": "(the infamous Greta)",
+      "image": "SAME",
+      "avatar":"NONE"
+    } ,
+    {
+      "text": "note: ellie smiles here",
+      "image": "SAME",
+      "avatar":"NONE"
     }
   ],
   "scene4": [
     {
-      "text": "NONE",
+      "text": "I can’t believe they made me wait for an hour just to file a complaint.",
       "image": "/com/dilazehra/Images/backgrounds/background8.png",
+      "avatar":"/com/dilazehra/Images/avatars/mike.png"
+    },
+    {
+      "text": "And now I want to go home quickly.",
+      "image": "SAME",
       "avatar":"NONE"
     },
     {
-      "text": "We know better than just to believe in common fairytales...",
-      "image": "/com/dilazehra/Images/backgrounds/background8.png",
-      "avatar":"/com/dilazehra/Images/avatars/santonix.png"
+      "text": "That Greta is with her again.",
+      "image": "SAME",
+      "avatar":"SAME"
     },
     {
-      "text": "Up now, we have a whole mansion ahead of us.",
-      "image": "/com/dilazehra/Images/backgrounds/background8.png",
-      "avatar":"/com/dilazehra/Images/avatars/santonix.png"
-    },
-    {
-      "text": "(It might be my imagination but he looked dead serious for a second)",
-      "image": "/com/dilazehra/Images/backgrounds/background8.png",
-      "avatar":"NONE"
+      "text": "Ellie’s lawyer uncle doesn’t like Greta either, what did he say...",
+      "image": "SAME",
+      "avatar":"/com/dilazehra/Images/avatars/mike.png"
     },
 
     {
+      "text": "\"Ellie’s under Greta’s influence.\"",
+      "image": "SAME",
+      "avatar":"NONE"
+    },
+    {
+      "text": "I have a bad feeling about this.",
+      "image": "SAME",
+      "avatar":"/com/dilazehra/Images/avatars/mike.png"
+    },
+    {
+      "text": "The house is just past this hill.",
+      "image": "/com/dilazehra/Images/backgrounds/background8.png",
+      "avatar":"/com/dilazehra/Images/avatars/mike.png"
+    },
+    {
+      "text": "That's the spot is where I first saw Ellie. ",
+      "image": "SAME",
+      "avatar":"SAME"
+    } ,
+    {
+      "text": "Is there someone?",
+      "image": "/com/dilazehra/Images/backgrounds/background8.png",
+      "avatar":"SAME"
+    },
+    {
       "text": "NONE",
       "image": "/com/dilazehra/Images/backgrounds/background8.png",
       "avatar":"NONE"
     },
     {
-      "text": "We know better than just to believe in common fairytales...",
+      "text": "You’re the one who bought the cursed land?",
       "image": "/com/dilazehra/Images/backgrounds/background8.png",
-      "avatar":"/com/dilazehra/Images/avatars/santonix.png"
+      "avatar":"NONE"
     },
     {
-      "text": "Up now, we have a whole mansion ahead of us.",
-      "image": "/com/dilazehra/Images/backgrounds/background8.png",
-      "avatar":"/com/dilazehra/Images/avatars/santonix.png"
+      "text": "New character added. Mrs Lee unlocked.",
+      "image": "SAME",
+      "avatar":"NONE"
+    }
+    ,
+    {
+      "text": "Proudly yes. Neither me nor my wife believe in any of your fairytales.",
+      "image": "SAME",
+      "avatar":"/com/dilazehra/Images/avatars/mike.png"
     },
     {
-      "text": "(It might be my imagination but he looked dead serious for a second)",
+      "text": "You have done a terrible thing my child.Nothing good comes out of Gipsy’s Acre and never will.",
+      "image": "SAME",
+      "avatar":"/com/dilazehra/Images/avatars/lee.png"
+    },
+    {
+      "text": "The last people that lived there died, all of them.",
+      "image": "SAME",
+      "avatar":"SAME"
+    },
+
+    {
+      "text": "I’ll tell your fortune now, my pretty lad.Cross my palm with silver and I’ll tell your fortune.",
+      "image": "SAME",
+      "avatar":"SAME"
+    },
+    {
+      "text": "I don’t believe in fortunes.",
+      "image": "SAME",
+      "avatar":"/com/dilazehra/Images/avatars/mike.png"
+    },
+    {
+      "text": "(I was told that she was a weird one but seeing her like this)",
+      "image": "/com/dilazehra/Images/backgrounds/background8.png",
+      "avatar":"NONE"
+    },
+    {
+      "text": "Come now, pretty lad. I am usually not this persistent, I will make an exception for this one.",
+      "image": "SAME",
+      "avatar":"/com/dilazehra/Images/avatars/lee.png"
+    } ,
+    {
+      "text": "Guess I have no other option then.",
+      "image": "/com/dilazehra/Images/backgrounds/background8.png",
+      "avatar":"/com/dilazehra/Images/avatars/mike.png"
+    },
+    {
+      "text": "NONE",
+      "image": "/com/dilazehra/Images/backgrounds/background8.png",
+      "avatar":"NONE"
+    },
+    {
+      "text": "If you know what is good for you, you leave this land at once.",
+      "image": "/com/dilazehra/Images/backgrounds/background8.png",
+      "avatar":"/com/dilazehra/Images/avatars/lee.png"
+    },
+    {
+      "text": "But I am afraid it is too late to do that isn’t it? How I wish I could’ve stopped you from buying this cursed land.",
+      "image": "SAME",
+      "avatar":"SAME"
+    } ,
+    {
+      "text": "Well if you’re done, I have got to get home now Mrs Lee.",
+      "image": "SAME",
+      "avatar":"/com/dilazehra/Images/avatars/mike.png"
+    }
+    ,
+    {
+      "text": "what a weird woman, She must believe we are intruder’s trespassing Gypsy’s land.",
+      "image": "/com/dilazehra/Images/backgrounds/background8.png",
+      "avatar":"NONE"
+    },
+    {
+      "text": "(mumble) Poor child.",
+      "image": "SAME",
+      "avatar":"/com/dilazehra/Images/avatars/lee.png"
+    } ,
+    {
+      "text": "I am home now.",
+      "image": "/com/dilazehra/Images/backgrounds/background8.png",
+      "avatar":"/com/dilazehra/Images/avatars/mike.png"
+    },
+    {
+      "text": "oh welcome dear.",
+      "image": "/com/dilazehra/Images/backgrounds/background8.png",
+      "avatar":"/com/dilazehra/Images/avatars/ellie.png"
+    },
+    {
+      "text": "This is Greta I told you about.",
+      "image": "SAME",
+      "avatar":"SAME"
+    } ,
+    {
+      "text": "New character added. Greta unlocked.",
       "image": "/com/dilazehra/Images/backgrounds/background8.png",
       "avatar":"NONE"
     }
